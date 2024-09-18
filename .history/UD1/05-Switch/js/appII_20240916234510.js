@@ -2,7 +2,6 @@
 let nota = prompt("Introduzca nota [1-10]");
 let resultado;
 
-//switch con los casos en condicional
 switch (true) {
   case nota >= 1 && nota <= 4:
     resultado = "Insuficiente";

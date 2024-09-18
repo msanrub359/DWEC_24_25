@@ -1,7 +1,7 @@
 "use strict";
 //declarar variables locales o globales al script
 let numero,
-    resultado = 1;
+  resultado = 1;
 
 //bucle for para mostrar los números del 1 al 20
 // console.log('----MOSTRAR NÚMEROS DEL 1 AL 20 ----');

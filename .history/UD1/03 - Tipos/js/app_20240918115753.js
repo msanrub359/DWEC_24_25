@@ -11,11 +11,8 @@ console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof
 //cambiar el valor y tipo a la variable numero
 numero=true;
 console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof numero}`);
-
 numero="23";
 console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof numero}`);
-
-//sumar una cadena con una variable numérica, sería concatenar los valores
 
 numero="23" + 3;
 console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof numero}`);

@@ -1,11 +1,7 @@
 "use strict";
 //declarar las variables globales al script
 const numero = "123";
-
-//condicional en una sola línea
 if (numero == 123) console.log("Los números son iguales");
-
-//condicional en bloque
 if (numero == 123) {
   console.log("Los números son iguales");
 }

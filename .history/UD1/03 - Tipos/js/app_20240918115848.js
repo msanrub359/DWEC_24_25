@@ -15,7 +15,7 @@ console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof
 numero="23";
 console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof numero}`);
 
-//sumar una cadena con una variable numérica, sería concatenar los valores
+//sumar una cadena con una variable numérica, 
 
 numero="23" + 3;
 console.log(`El valor de la variable numero es ${numero} y el typeof es ${typeof numero}`);
