@@ -1,7 +1,7 @@
 
-console.log('hola Mundo JavaScript');//mostrar datos en consola
-console.warn("Error warning");
-console.error("Mensaje de eror");
+console.'hola Mundo JavaScript');//mostrar datos en consola
+console.("Error warning");
+console.r("Mensaje de eror");
 
 // alert("Buenos días, a 'JavaScript'"); //mostrar dato en ventana del navegador
 //const respuesta=confirm("¿Desea salir del navegador");

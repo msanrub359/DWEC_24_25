@@ -1,10 +1,10 @@
 
 console.log('hola Mundo JavaScript');//mostrar datos en consola
 console.warn("Error warning");
-console.error("Mensaje de eror");
-
+console.
+//prompt
 // alert("Buenos días, a 'JavaScript'"); //mostrar dato en ventana del navegador
-//const respuesta=confirm("¿Desea salir del navegador");
+//let respuesta=confirm("¿Desea salir del navegador");
 // if (confirm("¿Desea salir del navegador")===true){
 //     alert("Ha pulsado aceptar")
 // }else{

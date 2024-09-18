@@ -1,7 +1,7 @@
 "use strict" //Obligación declarar variables y constantes
 var edad=23;
 let nombre,
-    apel;
+;
 
 if (edad==23){
     const localidad='Córdoba';
