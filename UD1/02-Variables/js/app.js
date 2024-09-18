@@ -1,16 +1,28 @@
 "use strict" //Obligación declarar variables y constantes
-var edad=23;
-let nombre,
-    apel;
+//vamos a declarar varibles y constantes en un bloque para ver su modo de actuar
+let acceso=true;
 
-if (edad==23){
-    const localidad='Córdoba';
-    var apellidos='Pérez';
-    nombre='María'
-    console.log("El nombre es "+ nombre + " los apellidos son " +apellidos + " localidad" +localidad+ " la edad es "+ edad);
+//Declarar diferentes variables
+/* let a=10;
+let b=30;
+let c=40; */
 
-    //mostrar cadena y variables con interpolación o plantilla de carácteres
-    console.log(`El nombre es ${nombre} los apellidos sonn ${apellidos} localidad ${localidad} la edad es ${edad}`);
+// let a=10,
+//     b=20,
+//     c=30;
 
+if (acceso){
+    var nombre="M.Luz"; //variable global en todo el script
+    let apellidos= 'Sánchez Rubio'; //variable global solo en el bloque
+    const localidad='Córdoba'; //solo es visible en el bloque donde se crea y no se puede modificar su contenido
+
+    console.log(`El nombre es ${nombre}`);
+    console.log(`los apellidos son ${apellidos} y la localidad ${localidad}`);
+
+    //localidad='Sevilla'; //Dará un error, ya que la constante no puede modificar su valor
 }
-// console.log("El nombre es "+ nombre + " los apellidos son " +apellidos + " localidad" +localidad+ " la edad es "+ edad);  Error por el ámbito de las variables localidad y apellidos
+
+//tanto la variable apellidos como la constante localidad no se mostrarán ya que no son visibles fuera del bloque
+
+console.log(`El nombre es ${nombre}`);
+// los apellidos son ${apellidos} y la localidad ${localidad}`);
