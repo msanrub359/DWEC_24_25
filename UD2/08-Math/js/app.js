@@ -24,7 +24,3 @@ const anguloEnRadianes = angulo * (Math.PI / 180); // Convertir grados a radiane
 document.writeln(`<strong>Seno de 30 grados:</strong> ${Math.sin(anguloEnRadianes)} <br>`);
 document.writeln(`<strong>Coseno de 30 grados:</strong> ${Math.cos(anguloEnRadianes)}  <br>`);
 
-// Calcular mínimo y máximo
-
-document.writeln(`<strong>Mínimo de la serie: 7, 20, -8, 4: </strong> ${Math.min(7, 20, -8, 4)} <br>`);
-document.writeln(`<strong>Máximo de la serie: 7, 20, -8, 4:</strong> ${Math.max(7, 4, -8, 20)}  <br>`);

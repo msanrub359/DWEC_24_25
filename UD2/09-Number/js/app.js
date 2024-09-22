@@ -18,7 +18,7 @@ while (isNaN(numDato) || numDato !== null && numDato.trim() === "") {
 
 if (numDato !== null) {
   console.log(
-    `La suma del número ${numDato} +50 es= ${numDato + 50}`
+    `La suma del número ${numDato} +50 es= ${Number(numDato) + 50}`
   );
 }
 
