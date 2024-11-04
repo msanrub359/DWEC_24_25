@@ -6,7 +6,7 @@ let ventana,
 function comenzar(){
     ventana=open("", 'ventana', "width=200, height=300");
     //establecer el intervalo
-    intervalo=setTimeout(color, 1000) //ejecutará la función color cada segundo
+    intervalo=setTimeout(color, 1000) //ejecutará la función color al segundo de comenzar y solamente una vez
 }
 function color(){
     if (ventana.document.body.bgColor==="red"){

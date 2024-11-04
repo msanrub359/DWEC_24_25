@@ -21,8 +21,8 @@ function cerrarVent() {
     if (ventana==undefined || ventana.closed) {
         self.close(); // cerrar ventana principal
     }else if (confirm(`Ventana secundaria abierta\n¿Quiere cerrar la ventana secundaria?`)){
-        ventana.close();
-        self.close();
+        ventana.close(); //cerrar ventana secundaria
+        self.close(); //cerrar ventana principal
     }else{
         ventana.focus();
     }

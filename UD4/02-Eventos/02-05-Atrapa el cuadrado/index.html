@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa al Cuadrado</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Atrapa al Cuadrado</h1>
+        <p>Puntuación: <span id="puntuacion">0</span></p>
+        <div id="areaJuego">
+            <div id="cuadrado"></div>
+        </div>
+        <div class="instrucciones">
+            <p><strong>Instrucciones:</strong></p>
+            <ul>
+                <li>Haz clic en el cuadrado para ganar puntos.</li>
+                <li>Presiona <strong>P</strong> para pausar y <strong>R</strong> para reanudar.</li>
+                <li>Presiona <strong>Espacio</strong> para cambiar el color del cuadrado.</li>
+                <li>¡Cuidado! El cuadrado se moverá más rápido con cada acierto.</li>
+            </ul>
+        </div>
+        <p id="mensaje" class="hidden">¡Juego Terminado! Puntuación final: <span id="final"></span></p>
+        <button id="reiniciar" class="hidden">Reiniciar Juego</button>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
