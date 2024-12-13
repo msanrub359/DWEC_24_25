@@ -8,15 +8,30 @@
  *  Al ejecutarse init, imprime "Weather" en la consola.
  */
 const Weather = (() => {
+  const resultado= document.querySelector(".result-container");
+  const pais= document.querySelector("#countrySelect");
+  const city =document.querySelector("#cityInput");
   
+  /**
+   * @description método inicial
+   */
   const init = () => {
-    
+    const boton=document.querySelector('.btn');
+    boton.addEventListener("click", validar);
   };
 
   const validar = (e) => {
-    
+    e.preventDefault();
+
+    //comprobar que los campos no estén vacíos.
+    if (city.value === "" || pais.value === ""){
+      mostrarError('Todos los campos son obligatorios');
+    }else{
+      consultarAPIWeather(pais.value);
     }
-  };
+    
+ }
+  
 
   
 
@@ -57,41 +72,32 @@ const Weather = (() => {
   };
   /**
    *
-   * @param {String} pais
+   * @param {String} paisAbr
    */
-  const consultarAPIWeather = async (pais) => {
+  const consultarAPIWeather = async (paisAbr) => {
+    const API="2f52fa02726085297f9f1665bd255e67";
+    const URL= `https://api.openweathermap.org/data/2.5/weather?q=${city.value},${paisAbr}&appid=${API}`
     
+    //limpiar capa resultados
+    limpiarCapaResult();
+    //mostrar spinner
+    await crearSpinner();
+    //realizar la petición al servidor
+    const xhr= new XMLHttpRequest();
+    xhr.open("GET",URL,true);
+    xhr.onreadystatechange= ()=>{
+      if (xhr.readyState === 4){ //la comunicación con el servidor ha finalizado
+        const datos=JSON.parse(xhr.responseText);
+        console.log(datos);
+        const {cod, message} =datos;
+        if (cod == 200){ //La petición es correcta
+         mostrarClima(datos);
+        }else if (cod == 404){ //la petición es incorrecta
+          mostrarError(`No existe ${city.value} del ${pais.value}`)
+        }else{ //cuando se produce un fallo del servidor
+          mostrarError(message)
+        }
+      }
+    }
+    xhr.send(); //Inicio de comunicación con el servidor
   };
-
-  
-
-  /**
-   * @description Mostrar las temperaturas de la ciudad
-   * @param {Object} datos | Contiene los datos de la API
-   */
-  const mostrarClima = (datos) => {
-   
-    
-  };
-
-   const crearSpinner=()=>{
-    return new Promise((resolve) => {
-      const spinner = document.createElement("span");
-      spinner.classList.add("loader");
-      resultado.append(spinner);
-
-      // El spinner debe permanecer por 3 segundos 
-      setTimeout(() => {
-        spinner.remove(); // Eliminar el spinner
-        resolve(); // Resuelve la promesa después de que el spinner haya desaparecido
-      }, 2000);
-    });
-   }
-
-
-  return {
-    init,
-  };
-})();
-
-document.addEventListener("DOMContentLoaded", Weather.init);
