@@ -101,3 +101,66 @@ const Weather = (() => {
     }
     xhr.send(); //Inicio de comunicación con el servidor
   };
+
+  
+
+  /**
+   * @description Mostrar las temperaturas de la ciudad
+   * @param {Object} datos | Contiene los datos de la API
+   */
+  const mostrarClima = (datos) => {
+    datos.main.temp
+    let {main:{temp, temp_min, temp_max}} = datos
+    //convertir las temperaturas a Celsius
+     temp= Math.round(temp-273.15);
+     temp_min = Math.round(temp_min-273.15);
+     temp_max = Math.round(temp_max-273.15);
+ 
+     if (resultado.children.length === 0){
+     //crear un párrafo para mostrar la temperatura
+     const nameCiudad=document.createElement("h2");
+     
+     const temperatura=document.createElement("p");
+     temperatura.classList.add("temp-main");
+    
+     const tempMin=document.createElement("p");
+     tempMin.classList.add("temp-min-max");
+     
+     const tempMax=document.createElement("p");
+     tempMax.classList.add("temp-min-max");
+     
+     resultado.append(nameCiudad, temperatura, tempMin, tempMax);
+     }
+     resultado.children[0].textContent =`El clima en ${city.value} es:`;
+     resultado.children[1].textContent =`${temp}°C`; //Alt 0176
+     resultado.children[2].textContent =`Min ${temp_min}°C`; //Alt 0176
+     resultado.children[3].textContent =`Max ${temp_max}°C`; //Alt 0176
+    
+  };
+
+   const crearSpinner=()=>{
+    return new Promise((resolve) => {
+      const spinner = document.createElement("span");
+      spinner.classList.add("loader");
+      resultado.append(spinner);
+
+      // El spinner debe permanecer por 3 segundos 
+      setTimeout(() => {
+        spinner.remove(); // Eliminar el spinner
+        resolve(); // Resuelve la promesa después de que el spinner haya desaparecido
+      }, 2000);
+    });
+   }
+   const limpiarCapaResult=()=>{
+    // [...resultado.children] utiliza el spread para convertir a Array
+    [...resultado.children].forEach(element => {
+        element.textContent="";
+    });
+   };
+
+  return {
+    init,
+  };
+})();
+
+document.addEventListener("DOMContentLoaded", Weather.init);
