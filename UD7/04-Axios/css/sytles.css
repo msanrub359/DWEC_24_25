@@ -1,0 +1,57 @@
+/* Fondo con degradado moderno */
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #4e7c16, #dfeae4); /* Gradiente claro */
+        color: white;
+    }
+
+    /* Contenedor principal */
+    .main-container {
+        padding-top: 20px;
+      }
+    /* Estilo de la tarjeta */
+    .card {
+      border: none;
+      border-radius: 10px;
+    }
+
+    
+    /* Estilo para el espacio de resultados */
+    .result-container {
+        margin-top: 20px;
+        padding: 10px;
+       
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+        min-height: 100px; /* Puedes ajustar el tamaño mínimo */
+      }
+
+      /* Botón con estilo moderno */
+.btn-primary {
+  background-color: #4e7c16;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #60991b;
+  transform: translateY(-2px);
+}
+
+.temp-main {
+  font-size: 3rem; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+ 
+}
+.temp-min-max {
+  font-size: 1rem; /* Más pequeño */
+  font-weight: bold; /* Negrita */
+  color: #6c757d; /* Color gris oscuro */
+}
+
+
+ 
