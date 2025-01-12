@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="../../assets/librerias/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/librerias/DataTables/datatables.min.css"
+    />
+   <link rel="stylesheet" href="../../assets/librerias/DataTables/select.dataTables.min.css">
+  <link rel="stylesheet" href="../../assets/librerias/DataTables/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    
+    <div class="contenido min-h-screen bg-slate-100 d-flex flex-column align-items-center justify-content-center">
+      <h1 class="mb-4 text-secondary">DataTable</h1>
+      <div class="container bg-white rounded shadow p-4">
+        <div class="row">
+          <div class="col-md-12 mb-4">
+            <table class="table table-bordered table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th class="text-center">
+                    <!-- Checkbox general para seleccionar/deseleccionar todas las filas -->
+                    <input type="checkbox" id="selectAll" class="form-check-input">
+                  </th>
+                  <th class="text-center" scope="col">ID Alumno</th>
+                  <th class="text-center" scope="col">Apellidos y Nombre</th>
+                  <th class="text-center" scope="col">ID Curso</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button class="btn btn-pastel btn-lg" type="button" style="background-color: #b3e5fc; color: #004d61; border: none;">
+            Recargar
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+      <script src="../../assets/librerias/jquery/jquery-3.7.1.min.js"></script>
+      <script src="../../assets/librerias/DataTables/datatables.min.js"></script>
+      <script src="../../assets/librerias/DataTables/dataTables.select.min.js"></script>  
+      <script src="../../assets/librerias/DataTables/dataTables.buttons.min.js"></script>
+      <script src="../../assets/librerias/otras/pdfmake.min.js"></script>
+      <script src="../../assets/librerias/otras/vfs_fonts.js"></script>
+      <script src="../../assets/librerias/otras/buttons.html5.min.js"></script>
+      <script src="./js/appIII.js"></script>
+      <noscript>El navegador no soporta JavaScript</noscript>
+    </div>
+  </body>
+</html>

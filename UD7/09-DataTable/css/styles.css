@@ -1,0 +1,29 @@
+.btn-pastel {
+    background-color: #b3e5fc;
+    color: #004d61;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-pastel:hover {
+    background-color: #81d4fa;
+    color: #003d4d;
+    transform: scale(1.05);
+  }
+  
+/* Centrar checkbox en las celdas del encabezado y cuerpo */
+th.text-center,
+td.text-center {
+    vertical-align: middle; /* Centrar verticalmente */
+    text-align: center;     /* Centrar horizontalmente */
+}
+
+th.text-center input[type="checkbox"],
+td.text-center input[type="checkbox"] {
+    margin: 0;             /* Eliminar márgenes */
+    position: relative;    /* Asegurar la posición */
+    transform: scale(1.2); /* Opcional: ajustar el tamaño del checkbox */
+}
+
