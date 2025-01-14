@@ -19,6 +19,12 @@ const Alumnos=(()=>{
            const response=await fetch(`${URI}/alumnos`);
            if (response.status == 200){
              const data=await response.json();
+             // Destruir la tabla si ya está inicializada
+             if ($.fn.DataTable.isDataTable('.table')) {
+                $('.table').DataTable().destroy();
+            }
+            //limpiar las filas
+            document.querySelectorAll(".table tbody tr").forEach(row=>row.remove()); //Eliminar filas de la tabla
            //rellenar la tabla
             data.forEach(elemento => {
                     //crear las filas
@@ -69,7 +75,8 @@ const Alumnos=(()=>{
             },
             columnDefs:[ //centrar el contenido de las columnas
                 {
-                    "className": "dt-center", "targets":"_all"
+                    "className": "dt-center",
+                    "targets":"_all"
              },
              {
                 orderable: false,      // Desactivar ordenación
